@@ -1,52 +1,55 @@
-﻿var myAge = 33;
+﻿string name;
+string gender;
+int age;
 
-// liczby całkowite
-int newAge = myAge + 8;
-//Console.WriteLine(newAge);
+name = "Agata";
+gender = "Kobieta";
+age = 28;
 
-int myVar = int.MinValue;
-uint myVar2 = uint.MinValue;
-long myVar3 = long.MinValue;
-ulong myVar4 = ulong.MaxValue;
-
-// liczby zmiennoprzecinkowe
-float myNumber = float.MaxValue;
-double myNumber2 = double.MaxValue;
-decimal myNumber3 = decimal.MaxValue;
-
-// zmienne tekstowe
-string masterName = "Adam";
-string masterSurname = "Kamizelich";
-string result = masterName + myAge + masterSurname;
-//Console.WriteLine(result);
-
-char myVar5 = 'c';
-var result2 = masterName.ToArray();
-
-// zmienna bool
-bool isActive = true;
-isActive = false;
-var isValid = 5 > 6;
-//Console.WriteLine(isValid);
-
-if (myAge > newAge)
+if (gender == "Kobieta" && age < 30)
 {
-    Console.WriteLine("Linia 34");
+    Console.WriteLine("Kobieta poniżej 30 lat");
 }
-else
+else if (gender == "Ewa" && age == 33)
 {
-    Console.WriteLine("Linia 38");
+    Console.WriteLine("Ewa ma 33 lata");
+}
+else if (gender == "Mężczyzna" && age < 18)
+{
+    Console.WriteLine("Niepełnoletni mężczyzna");
 }
 
-if (masterName == "Adam" && newAge < 50)
+
+name = "Robert";
+gender = "Mężczyzna";
+age = 15;
+
+if (gender == "Kobieta" && age < 30)
 {
-    Console.WriteLine("Mistrz jest przed 50.");
+    Console.WriteLine("Kobieta poniżej 30 lat");
 }
-else if (newAge > 40)
+else if (gender == "Ewa" && age == 33)
 {
-    Console.WriteLine("40. latek");
+    Console.WriteLine("Ewa ma 33 lata");
 }
-else
+else if (gender == "Mężczyzna" && age < 18)
 {
-    Console.WriteLine("Kim jestes?");
+    Console.WriteLine("Niepełnoletni mężczyzna");
+}
+
+name = "Ewa";
+gender = "Kobieta";
+age = 33;
+
+if (gender == "Kobieta" && age < 30)
+{
+    Console.WriteLine("Kobieta poniżej 30 lat");
+}
+else if (name == "Ewa" && age == 33)
+{
+    Console.WriteLine("Ewa ma 33 lata");
+}
+else if (gender == "Mężczyzna" && age < 18)
+{
+    Console.WriteLine("Niepełnoletni mężczyzna");
 }
