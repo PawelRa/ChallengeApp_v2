@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeApp_v2", "Challeng
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tablice", "Tablice\Tablice.csproj", "{076DDB03-773A-4514-8506-F4E9FA737F16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dzień 5 - zadanie domowe", "Dzień 5 - zadanie domowe\Dzień 5 - zadanie domowe.csproj", "{EE6CDD50-3BF9-402C-9B0E-183479A27451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{076DDB03-773A-4514-8506-F4E9FA737F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{076DDB03-773A-4514-8506-F4E9FA737F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{076DDB03-773A-4514-8506-F4E9FA737F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6CDD50-3BF9-402C-9B0E-183479A27451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6CDD50-3BF9-402C-9B0E-183479A27451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6CDD50-3BF9-402C-9B0E-183479A27451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6CDD50-3BF9-402C-9B0E-183479A27451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
