@@ -1,6 +1,6 @@
 ﻿namespace Dzień_6___lekcje
 {
-    class User
+    public class User
     {
         public static string GameName = "Diablo";
 

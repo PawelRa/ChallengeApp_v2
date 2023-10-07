@@ -25,7 +25,7 @@ List<string> days = new List<string>();
 days.Add("poniedzialek");
 days.Add("wtorek");
 days.Add("środa");
-days.Add("czwartek)";
+days.Add("czwartek");
 days.Add("piątek");
 days.Add("sobota");
 days.Add("niedziela");
