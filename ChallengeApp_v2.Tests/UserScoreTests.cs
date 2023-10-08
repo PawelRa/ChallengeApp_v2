@@ -2,7 +2,7 @@ using Dzieñ_6___lekcje;
 
 namespace ChallengeApp_v2.Tests
 {
-    public class Tests
+    public class UserScoreTests
     {
         [Test]
         public void WhenUserCollectTwoScores_ThenReturnCorrectSumAsResult()
