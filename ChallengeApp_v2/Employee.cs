@@ -17,6 +17,14 @@
             this.grades.Add(grade);
         }
 
+        public float Result
+        {
+            get
+            {
+                return this.grades.Sum();
+            }
+        }
+
         public Statistics GetStatistics()
         {
             var statistics = new Statistics();
