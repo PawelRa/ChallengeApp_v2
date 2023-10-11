@@ -1,55 +1,14 @@
-﻿string name;
-string gender;
-int age;
+﻿using ChallengeApp_v2;
 
-name = "Agata";
-gender = "Kobieta";
-age = 28;
+var employee = new Employee("Adam", "Kamizelich");
 
-if (gender == "Kobieta" && age < 30)
-{
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else if (name == "Ewa" && age == 33)
-{
-    Console.WriteLine("Ewa ma 33 lata");
-}
-else if (gender == "Mężczyzna" && age < 18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
+employee.AddGrade(2);
+employee.AddGrade(8);
+employee.AddGrade(2);
+employee.AddGrade(-2);
 
+var statistics = employee.GetStatistics();
 
-name = "Robert";
-gender = "Mężczyzna";
-age = 15;
-
-if (gender == "Kobieta" && age < 30)
-{
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else if (name == "Ewa" && age == 33)
-{
-    Console.WriteLine("Ewa ma 33 lata");
-}
-else if (gender == "Mężczyzna" && age < 18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
-
-name = "Ewa";
-gender = "Kobieta";
-age = 33;
-
-if (gender == "Kobieta" && age < 30)
-{
-    Console.WriteLine("Kobieta poniżej 30 lat");
-}
-else if (name == "Ewa" && age == 33)
-{
-    Console.WriteLine("Ewa ma 33 lata");
-}
-else if (gender == "Mężczyzna" && age < 18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
+Console.WriteLine($"Average = {statistics.Average:N2}");
+Console.WriteLine($"Max = {statistics.Max}");
+Console.WriteLine($"Min = {statistics.Min}");
