@@ -12,6 +12,7 @@ namespace ChallengeApp_v2.Tests
             emp.AddGrade(2);
             emp.AddGrade(2);
             emp.AddGrade(4);
+            emp.AddGrade(-4);
 
             //act
             var result = emp.Result;
@@ -28,6 +29,7 @@ namespace ChallengeApp_v2.Tests
             emp.AddGrade(2);
             emp.AddGrade(2);
             emp.AddGrade(4);
+            emp.AddGrade(2000);
             var statistics = emp.GetStatistics();
 
             //act
