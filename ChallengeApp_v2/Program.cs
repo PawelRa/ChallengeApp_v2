@@ -8,7 +8,7 @@ employee.AddGrade(8);
 employee.AddGrade(2);
 employee.AddGrade(-2);
 
-var statistics = employee.GetStatistics();
+var statistics = employee.GetStatisticsWithForEach();
 
 Console.WriteLine($"Average = {statistics.Average:N2}");
 Console.WriteLine($"Max = {statistics.Max}");

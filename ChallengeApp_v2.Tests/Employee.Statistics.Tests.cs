@@ -22,7 +22,7 @@ namespace ChallengeApp_v2.Tests
         }
 
         [Test]
-        public void MaxValueTest()
+        public void MaxValueTestWithForEach()
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
@@ -30,7 +30,7 @@ namespace ChallengeApp_v2.Tests
             emp.AddGrade(2f);
             emp.AddGrade("4");
             emp.AddGrade(2000);
-            var statistics = emp.GetStatistics();
+            var statistics = emp.GetStatisticsWithForEach();
 
             //act
             var max = statistics.Max;
@@ -40,14 +40,14 @@ namespace ChallengeApp_v2.Tests
         }
 
         [Test]
-        public void MinValueTest()
+        public void MinValueTestWithFor()
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
             emp.AddGrade(2);
             emp.AddGrade(2);
             emp.AddGrade(4);
-            var statistics = emp.GetStatistics();
+            var statistics = emp.GetStatisticsWithFor();
 
             //act
             var min = statistics.Min;
@@ -57,14 +57,14 @@ namespace ChallengeApp_v2.Tests
         }
 
         [Test]
-        public void AverageValueTest()
+        public void AverageValueTestWithGetStatisticsWithDoWhile()
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
             emp.AddGrade(3);
             emp.AddGrade(2);
             emp.AddGrade(4);
-            var statistics = emp.GetStatistics();
+            var statistics = emp.GetStatisticsWithDoWhile();
 
             //act
             var average = statistics.Average;
@@ -72,5 +72,24 @@ namespace ChallengeApp_v2.Tests
             //assert
             Assert.That(3, Is.EqualTo(average));
         }
+
+        [Test]
+        public void AverageValueTestWithGetStatisticsWithWhile()
+        {
+            //arrange
+            var emp = new Employee("Amadeusz", "Kubiak");
+            emp.AddGrade(3);
+            emp.AddGrade(2);
+            emp.AddGrade(4);
+            var statistics = emp.GetStatisticsWithWhile();
+
+            //act
+            var average = statistics.Average;
+
+            //assert
+            Assert.That(3, Is.EqualTo(average));
+        }
+
+
     }
 }
