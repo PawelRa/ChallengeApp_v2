@@ -27,7 +27,7 @@ namespace ChallengeApp_v2.Tests
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
             emp.AddGrade('2');
-            emp.AddGrade(2);
+            emp.AddGrade(2f);
             emp.AddGrade("4");
             emp.AddGrade(2000);
             var statistics = emp.GetStatistics();

@@ -44,11 +44,14 @@
 
         public void AddGrade(double grade)
         {
-            if (float.TryParse(grade.ToString(), out float value))
-            {
-                this.AddGrade(value);
-            }
-            else { Console.WriteLine("String is not float"); }
+            float value = (float)grade;
+            this.AddGrade(value);
+        }
+
+        public void AddGrade(int grade)
+        {
+            float value = grade;
+            this.AddGrade(value);
         }
 
         public void AddGrade(long grade)
