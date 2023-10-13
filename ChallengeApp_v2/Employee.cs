@@ -24,6 +24,42 @@
             }
         }
 
+        public void AddGrade(string grade)
+        {
+            if (float.TryParse(grade, out float value))
+            {
+                this.AddGrade(value);
+            }
+            else { Console.WriteLine("String is not float"); }
+        }
+
+        public void AddGrade(char grade)
+        {
+            if (float.TryParse(grade.ToString(), out float value))
+            {
+                this.AddGrade(value);
+            }
+            else { Console.WriteLine("String is not float"); }
+        }
+
+        public void AddGrade(double grade)
+        {
+            if (float.TryParse(grade.ToString(), out float value))
+            {
+                this.AddGrade(value);
+            }
+            else { Console.WriteLine("String is not float"); }
+        }
+
+        public void AddGrade(long grade)
+        {
+            if (float.TryParse(grade.ToString(), out float value))
+            {
+                this.AddGrade(value);
+            }
+            else { Console.WriteLine("String is not float"); }
+        }
+
         public float Result
         {
             get
