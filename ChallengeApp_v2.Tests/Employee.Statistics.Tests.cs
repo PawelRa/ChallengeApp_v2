@@ -1,6 +1,4 @@
-﻿using Dzien_6___zadanie_domowe;
-
-namespace ChallengeApp_v2.Tests
+﻿namespace ChallengeApp_v2.Tests
 {
     public class EmployeeStatisticsTests
     {

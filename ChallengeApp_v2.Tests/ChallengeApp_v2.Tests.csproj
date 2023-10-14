@@ -19,9 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ChallengeApp_v2\ChallengeApp_v2.csproj" />
-    <ProjectReference Include="..\Dzien 6 - zadanie domowe\Dzien 6 - zadanie domowe.csproj" />
-    <ProjectReference Include="..\Dzień 5 - zadanie domowe\Dzień 5 - zadanie domowe.csproj" />
-    <ProjectReference Include="..\Dzień 6 - lekcje\Dzień 6 - lekcje.csproj" />
   </ItemGroup>
 
 </Project>
