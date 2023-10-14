@@ -25,4 +25,4 @@ var statistics = employee.GetStatisticsWithForEach();
 Console.WriteLine($"Average = {statistics.Average:N2}");
 Console.WriteLine($"Max = {statistics.Max}");
 Console.WriteLine($"Min = {statistics.Min}");
-Console.WriteLine($"Ocena Literowan = {statistics.AverageLetter}");
+Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");

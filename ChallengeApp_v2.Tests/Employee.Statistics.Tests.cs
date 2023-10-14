@@ -90,6 +90,63 @@ namespace ChallengeApp_v2.Tests
             Assert.That(3, Is.EqualTo(average));
         }
 
+        [Test]
+        public void AverageValueTestWithOneLetter()
+        {
+            //arrange
+            var emp = new Employee("Amadeusz", "Kubiak");
+            emp.AddGrade('a');
+            emp.AddGrade("a");
+            emp.AddGrade('A');
+            emp.AddGrade("A");
+            var statistics = emp.GetStatisticsWithFor();
 
+            //act
+            var average = statistics.Average;
+            var averageLetter = statistics.AverageLetter;
+
+            //assert
+            Assert.That(100, Is.EqualTo(average));
+            Assert.That('A', Is.EqualTo(averageLetter));
+        }
+
+        [Test]
+        public void AverageValueTestWithLettersAndNumbers()
+        {
+            //arrange
+            var emp = new Employee("Amadeusz", "Kubiak");
+            emp.AddGrade('a');
+            emp.AddGrade("a");
+            emp.AddGrade(60f);
+            emp.AddGrade("60");
+            var statistics = emp.GetStatisticsWithDoWhile();
+
+            //act
+            var average = statistics.Average;
+            var averageLetter = statistics.AverageLetter;
+
+            //assert
+            Assert.That(80, Is.EqualTo(average));
+            Assert.That('B', Is.EqualTo(averageLetter));
+        }
+
+        [Test]
+        public void AverageValueTestWithDifferentLetters()
+        {
+            //arrange
+            var emp = new Employee("Amadeusz", "Kubiak");
+            emp.AddGrade('c');
+            emp.AddGrade("D");
+            emp.AddGrade("e");
+            var statistics = emp.GetStatisticsWithFor();
+
+            //act
+            var average = statistics.Average;
+            var averageLetter = statistics.AverageLetter;
+
+            //assert
+            Assert.That(40, Is.EqualTo(average));
+            Assert.That('D', Is.EqualTo(averageLetter));
+        }
     }
 }

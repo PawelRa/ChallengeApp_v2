@@ -28,7 +28,11 @@ namespace ChallengeApp_v2
 
         public void AddGrade(string grade)
         {
-            if (float.TryParse(grade, out float value))
+            if ((grade.Length == 1) && (char.ToUpper(grade[0]) == 'A' || char.ToUpper(grade[0]) == 'B' || char.ToUpper(grade[0]) == 'C' || char.ToUpper(grade[0]) == 'D' || char.ToUpper(grade[0]) == 'E'))
+            {
+                this.AddGrade(grade[0]);
+            }
+            else if (float.TryParse(grade, out float value))
             {
                 this.AddGrade(value);
             }
@@ -145,6 +149,28 @@ namespace ChallengeApp_v2
             }
             statistics.Average /= this.grades.Count;
 
+            switch (statistics.Average)
+            {
+                case var average when average >= 100:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average >= 80:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average >= 60:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average >= 40:
+                    statistics.AverageLetter = 'D';
+                    break;
+                case var average when average >= 20:
+                    statistics.AverageLetter = 'E';
+                    break;
+                default:
+                    Console.WriteLine("Bad");
+                    break;
+            }
+
             return statistics;
         }
 
@@ -165,6 +191,28 @@ namespace ChallengeApp_v2
             } while (index < this.grades.Count);
             statistics.Average /= this.grades.Count;
 
+            switch (statistics.Average)
+            {
+                case var average when average >= 100:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average >= 80:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average >= 60:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average >= 40:
+                    statistics.AverageLetter = 'D';
+                    break;
+                case var average when average >= 20:
+                    statistics.AverageLetter = 'E';
+                    break;
+                default:
+                    Console.WriteLine("Bad");
+                    break;
+            }
+
             return statistics;
         }
 
@@ -184,6 +232,28 @@ namespace ChallengeApp_v2
                 index++;
             }
             statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var average when average >= 100:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average >= 80:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average >= 60:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average >= 40:
+                    statistics.AverageLetter = 'D';
+                    break;
+                case var average when average >= 20:
+                    statistics.AverageLetter = 'E';
+                    break;
+                default:
+                    Console.WriteLine("Bad");
+                    break;
+            }
 
             return statistics;
         }
