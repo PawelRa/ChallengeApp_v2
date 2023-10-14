@@ -37,11 +37,28 @@ namespace ChallengeApp_v2
 
         public void AddGrade(char grade)
         {
-            if (float.TryParse(grade.ToString(), out float value))
+            switch (char.ToUpper(grade))
             {
-                this.AddGrade(value);
+                case 'A':
+                    this.grades.Add(100);
+                    break;
+                case 'B':
+                    this.grades.Add(80);
+                    break;
+                case 'C':
+                    this.grades.Add(60);
+                    break;
+                case 'D':
+                    this.grades.Add(40);
+                    break;
+                case 'E':
+                    this.grades.Add(20);
+                    break;
+                default:
+                    Console.WriteLine("Wrong Letter");
+                    this.grades.Add(0);
+                    break;
             }
-            else { Console.WriteLine("String is not float"); }
         }
 
         public void AddGrade(double grade)
@@ -87,6 +104,28 @@ namespace ChallengeApp_v2
                 statistics.Average += grade;
             }
             statistics.Average /= this.grades.Count;
+
+            switch (statistics.Average)
+            {
+                case var average when average >= 100:
+                    statistics.AverageLetter = 'A';
+                    break;
+                case var average when average >= 80:
+                    statistics.AverageLetter = 'B';
+                    break;
+                case var average when average >= 60:
+                    statistics.AverageLetter = 'C';
+                    break;
+                case var average when average >= 40:
+                    statistics.AverageLetter = 'D';
+                    break;
+                case var average when average >= 20:
+                    statistics.AverageLetter = 'E';
+                    break;
+                default:
+                    Console.WriteLine("Bad");
+                    break;
+            }
 
             return statistics;
         }
@@ -143,7 +182,7 @@ namespace ChallengeApp_v2
                 statistics.Min = Math.Min(statistics.Min, this.grades[index]);
                 statistics.Average += this.grades[index];
                 index++;
-            } 
+            }
             statistics.Average /= this.grades.Count;
 
             return statistics;
