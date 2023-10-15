@@ -4,8 +4,6 @@ namespace ChallengeApp_v2
 {
     public class Employee
     {
-        private readonly char gender;
-
         private List<float> grades = new List<float>();
 
         public Employee(string name, string surname)
@@ -38,7 +36,10 @@ namespace ChallengeApp_v2
             {
                 this.AddGrade(value);
             }
-            else { throw new Exception("String is not float"); }
+            else
+            {
+                throw new Exception("String is not float");
+            }
         }
 
         public void AddGrade(char grade)

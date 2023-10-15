@@ -19,7 +19,6 @@ while (true)
     try
     {
         employee.AddGrade(input);
-
     }
     catch (Exception ex)
     {
