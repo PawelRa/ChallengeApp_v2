@@ -16,7 +16,16 @@ while (true)
     {
         break;
     }
-    employee.AddGrade(input);
+    try
+    {
+        employee.AddGrade(input);
+
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Exception \"{ex.Message}\" catched");
+    }
+
     Console.WriteLine("Aby wyjść z programu wciśnij 'q'");
 }
 

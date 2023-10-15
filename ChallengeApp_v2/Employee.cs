@@ -4,6 +4,8 @@ namespace ChallengeApp_v2
 {
     public class Employee
     {
+        private readonly char gender;
+
         private List<float> grades = new List<float>();
 
         public Employee(string name, string surname)
@@ -22,7 +24,7 @@ namespace ChallengeApp_v2
             }
             else
             {
-                Console.WriteLine("Invalid grade data");
+                throw new Exception("Invalid grade data");
             }
         }
 
@@ -36,7 +38,7 @@ namespace ChallengeApp_v2
             {
                 this.AddGrade(value);
             }
-            else { Console.WriteLine("String is not float"); }
+            else { throw new Exception("String is not float"); }
         }
 
         public void AddGrade(char grade)
@@ -59,9 +61,8 @@ namespace ChallengeApp_v2
                     this.grades.Add(20);
                     break;
                 default:
-                    Console.WriteLine("Wrong Letter");
                     this.grades.Add(0);
-                    break;
+                    throw new Exception("Wrong Letter");
             }
         }
 
@@ -83,7 +84,10 @@ namespace ChallengeApp_v2
             {
                 this.AddGrade(value);
             }
-            else { Console.WriteLine("String is not float"); }
+            else
+            {
+                throw new Exception("String is not float");
+            }
         }
 
         public float Result
@@ -127,8 +131,7 @@ namespace ChallengeApp_v2
                     statistics.AverageLetter = 'E';
                     break;
                 default:
-                    Console.WriteLine("Bad");
-                    break;
+                    throw new Exception("Bad letter");
             }
 
             return statistics;
@@ -167,8 +170,7 @@ namespace ChallengeApp_v2
                     statistics.AverageLetter = 'E';
                     break;
                 default:
-                    Console.WriteLine("Bad");
-                    break;
+                    throw new Exception("Bad letter");
             }
 
             return statistics;
@@ -209,8 +211,7 @@ namespace ChallengeApp_v2
                     statistics.AverageLetter = 'E';
                     break;
                 default:
-                    Console.WriteLine("Bad");
-                    break;
+                    throw new Exception("Bad letter");
             }
 
             return statistics;
@@ -251,8 +252,7 @@ namespace ChallengeApp_v2
                     statistics.AverageLetter = 'E';
                     break;
                 default:
-                    Console.WriteLine("Bad");
-                    break;
+                    throw new Exception("Bad letter");
             }
 
             return statistics;
