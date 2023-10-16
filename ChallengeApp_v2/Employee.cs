@@ -2,7 +2,7 @@
 
 namespace ChallengeApp_v2
 {
-    public class Employee
+    public class Employee : Person
     {
         private List<float> grades = new List<float>();
 
@@ -11,7 +11,7 @@ namespace ChallengeApp_v2
             this.Name = name;
             this.Surname = surname;
         }
-        public string Name { get; private set; }
+
         public string Surname { get; private set; }
 
         public void AddGrade(float grade)
