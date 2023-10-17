@@ -6,13 +6,11 @@ namespace ChallengeApp_v2
     {
         private List<float> grades = new List<float>();
 
-        public Employee(string name, string surname)
+        public Employee(string name, string surname, char sex = 'M') : base(name, surname, sex)
         {
-            this.Name = name;
-            this.Surname = surname;
+
         }
 
-        public string Surname { get; private set; }
 
         public void AddGrade(float grade)
         {

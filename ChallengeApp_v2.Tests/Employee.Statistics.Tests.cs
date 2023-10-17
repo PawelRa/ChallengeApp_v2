@@ -7,16 +7,15 @@
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
-            emp.AddGrade(2);
-            emp.AddGrade(2);
-            emp.AddGrade(4);
-            emp.AddGrade(-4);
+            emp.AddGrade(20);
+            emp.AddGrade(20);
+            emp.AddGrade(40);           
 
             //act
             var result = emp.Result;
 
             //assert
-            Assert.That(8, Is.EqualTo(result));
+            Assert.That(80, Is.EqualTo(result));
         }
 
         [Test]
@@ -24,17 +23,16 @@
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
-            emp.AddGrade(2);
-            emp.AddGrade(2f);
-            emp.AddGrade("4");
-            emp.AddGrade(2000);
+            emp.AddGrade(20);
+            emp.AddGrade(20f);
+            emp.AddGrade("40");
             var statistics = emp.GetStatisticsWithForEach();
 
             //act
             var max = statistics.Max;
 
             //assert
-            Assert.That(4, Is.EqualTo(max));
+            Assert.That(40, Is.EqualTo(max));
         }
 
         [Test]
@@ -42,16 +40,16 @@
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
-            emp.AddGrade(2);
-            emp.AddGrade(2);
-            emp.AddGrade(4);
+            emp.AddGrade(20);
+            emp.AddGrade(20);
+            emp.AddGrade(40);
             var statistics = emp.GetStatisticsWithFor();
 
             //act
             var min = statistics.Min;
 
             //assert
-            Assert.That(2, Is.EqualTo(min));
+            Assert.That(20, Is.EqualTo(min));
         }
 
         [Test]
@@ -59,16 +57,16 @@
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
-            emp.AddGrade(3);
-            emp.AddGrade(2);
-            emp.AddGrade(4);
+            emp.AddGrade(30);
+            emp.AddGrade(20);
+            emp.AddGrade(40);
             var statistics = emp.GetStatisticsWithDoWhile();
 
             //act
             var average = statistics.Average;
 
             //assert
-            Assert.That(3, Is.EqualTo(average));
+            Assert.That(30, Is.EqualTo(average));
         }
 
         [Test]
@@ -76,16 +74,16 @@
         {
             //arrange
             var emp = new Employee("Amadeusz", "Kubiak");
-            emp.AddGrade(3);
-            emp.AddGrade(2);
-            emp.AddGrade(4);
+            emp.AddGrade(30);
+            emp.AddGrade(20);
+            emp.AddGrade(40);
             var statistics = emp.GetStatisticsWithWhile();
 
             //act
             var average = statistics.Average;
 
             //assert
-            Assert.That(3, Is.EqualTo(average));
+            Assert.That(30, Is.EqualTo(average));
         }
 
         [Test]
