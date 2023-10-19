@@ -28,7 +28,7 @@ while (true)
     Console.WriteLine("Aby wyjść z programu wciśnij 'q'");
 }
 
-var statistics = employee.GetStatisticsWithForEach();
+var statistics = employee.GetStatistics();
 
 Console.WriteLine($"Average = {statistics.Average:N2}");
 Console.WriteLine($"Max = {statistics.Max}");
