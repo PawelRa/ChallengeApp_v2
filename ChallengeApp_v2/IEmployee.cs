@@ -14,8 +14,6 @@
 
         void AddGrade(string grade);
 
-        void AddGrade(char grade);
-
         Statistics GetStatistics();
     }
 }
