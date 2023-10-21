@@ -4,7 +4,7 @@ Console.WriteLine("Witamy w programie XYZ do oceny pracownika");
 Console.WriteLine("========================================");
 Console.WriteLine();
 
-var employee = new Employee("Adam", "Kamizelich");
+var employee = new EmployeeInMemory("Adam", "Kamizelich");
 
 while (true)
 {

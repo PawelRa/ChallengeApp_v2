@@ -3,10 +3,10 @@
     public class EmployeeStatisticsTests
     {
         [Test]
-        public void WhenEmployeeGetGrades_ThenReturnCorrectSum()
+        public void WhenEmployeeInMemoryGetGrades_ThenReturnCorrectSum()
         {
             //arrange
-            var emp = new Employee("Amadeusz", "Kubiak");
+            var emp = new EmployeeInMemory("Amadeusz", "Kubiak");
             emp.AddGrade(20);
             emp.AddGrade(20);
             emp.AddGrade(40);
@@ -19,10 +19,10 @@
         }
 
         [Test]
-        public void MaxValueEmployeeTest()
+        public void MaxValueEmployeeInMemoryTest()
         {
             //arrange
-            var emp = new Employee("Amadeusz", "Kubiak");
+            var emp = new EmployeeInMemory("Amadeusz", "Kubiak");
             emp.AddGrade(20);
             emp.AddGrade(20f);
             emp.AddGrade("40");
@@ -36,10 +36,10 @@
         }
 
         [Test]
-        public void MinValueEmployeeTest()
+        public void MinValueEmployeeInMemoryTest()
         {
             //arrange
-            var emp = new Employee("Amadeusz", "Kubiak");
+            var emp = new EmployeeInMemory("Amadeusz", "Kubiak");
             emp.AddGrade(20);
             emp.AddGrade(20);
             emp.AddGrade(40);
@@ -53,10 +53,10 @@
         }
 
         [Test]
-        public void AverageValueEmployeeTest()
+        public void AverageValueEmployeeInMemoryTest()
         {
             //arrange
-            var emp = new Employee("Amadeusz", "Kubiak");
+            var emp = new EmployeeInMemory("Amadeusz", "Kubiak");
             emp.AddGrade(30);
             emp.AddGrade(20);
             emp.AddGrade(40);
@@ -68,7 +68,6 @@
             //assert
             Assert.That(30, Is.EqualTo(average));
         }
-
 
         [Test]
         public void WhenSupervisiorGetGrades_ThenReturnCorrectSum()
@@ -85,11 +84,6 @@
             //assert
             Assert.That(80, Is.EqualTo(result));
         }
-
-
-
-
-
 
         [Test]
         public void MaxValueSupervisorTest()
@@ -140,12 +134,5 @@
             //assert
             Assert.That(40, Is.EqualTo(average));
         }
-
-
-
-
-
-
-
     }
 }

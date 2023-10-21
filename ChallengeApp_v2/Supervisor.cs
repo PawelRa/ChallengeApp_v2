@@ -76,7 +76,7 @@
             this.AddGrade(value);
         }
 
-        public void AddGrade(long grade)
+            public void AddGrade(long grade)
         {
             if (float.TryParse(grade.ToString(), out float value))
             {
