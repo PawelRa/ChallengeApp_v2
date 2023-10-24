@@ -12,10 +12,10 @@ employee.AddGrade(36);
 
 var statistics = employee.GetStatistics();
 
-//Console.WriteLine($"Average = {statistics.Average:N2}");
-//Console.WriteLine($"Max = {statistics.Max}");
-//Console.WriteLine($"Min = {statistics.Min}");
-//Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
+Console.WriteLine($"Average = {statistics.Average:N2}");
+Console.WriteLine($"Max = {statistics.Max}");
+Console.WriteLine($"Min = {statistics.Min}");
+Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
 
 
 //=======================

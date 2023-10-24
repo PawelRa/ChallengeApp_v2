@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace ChallengeApp_v2
+﻿namespace ChallengeApp_v2
 {
     public class EmployeeInFile : EmployeeBase
     {
@@ -75,6 +73,7 @@ namespace ChallengeApp_v2
                         result.Min = Math.Min(result.Min, number);
                         result.Average += number;
                         lines++;
+                        line = reader.ReadLine();
                     }
                     result.Average /= lines;
 
@@ -98,9 +97,8 @@ namespace ChallengeApp_v2
                         default:
                             throw new Exception("Bad letter");
                     }
-
                 }
-             //   File.Delete(fileName);
+                File.Delete(fileName);
             }
             return result;
         }
