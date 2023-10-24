@@ -134,5 +134,10 @@
 
             return statistics;
         }
+
+        public void AddGrade(char grade)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

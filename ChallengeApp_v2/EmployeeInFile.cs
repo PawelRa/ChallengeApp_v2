@@ -5,7 +5,7 @@
 
         private const string fileName = "grades.txt";
 
-        public EmployeeInFile(string name, string surname) 
+        public EmployeeInFile(string name, string surname)
             : base(name, surname)
         {
         }
@@ -40,7 +40,23 @@
 
         public override Statistics GetStatistics()
         {
-            throw new NotImplementedException();
+
+            var result = new Statistics();
+
+            if (File.Exists(fileName))
+            {
+                using (var reader = File.OpenText(fileName))
+                {
+                    var line = reader.ReadLine();
+                    while (line != null)
+                    {
+                        var number = float.Parse(line);
+
+                    }
+                }
+                File.Delete(fileName);
+            }
+            return result;
         }
     }
 }

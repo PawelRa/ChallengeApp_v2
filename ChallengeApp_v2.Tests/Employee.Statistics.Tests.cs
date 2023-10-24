@@ -106,7 +106,6 @@
         {
             //arrange
             var emp = new Supervisor("Amadeusz", "Kubiak");
-            emp.AddGrade('6');
             emp.AddGrade("2");
             emp.AddGrade("3-");
             var statistics = emp.GetStatistics();

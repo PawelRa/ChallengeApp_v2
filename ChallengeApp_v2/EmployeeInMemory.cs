@@ -35,7 +35,8 @@
 
         public override void AddGrade(string grade)
         {
-            if ((grade.Length == 1) && (char.ToUpper(grade[0]) == 'A' || char.ToUpper(grade[0]) == 'B' || char.ToUpper(grade[0]) == 'C' || char.ToUpper(grade[0]) == 'D' || char.ToUpper(grade[0]) == 'E'))
+            if ((grade.Length == 1) && (char.ToUpper(grade[0]) == 'A' || char.ToUpper(grade[0]) == 'B'
+                || char.ToUpper(grade[0]) == 'C' || char.ToUpper(grade[0]) == 'D' || char.ToUpper(grade[0]) == 'E'))
             {
                 this.AddGrade(grade[0]);
             }

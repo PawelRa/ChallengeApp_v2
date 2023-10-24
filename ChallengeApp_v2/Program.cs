@@ -4,33 +4,40 @@ Console.WriteLine("Witamy w programie XYZ do oceny pracownika");
 Console.WriteLine("========================================");
 Console.WriteLine();
 
-var employee = new EmployeeInMemory("Adam", "Kamizelich");
+// Obsługa za pomocą zapisu do pliku
+var employee = new EmployeeInFile("Adam", "Kamizelich");
+employee.AddGrade(0.5f);
 
-while (true)
-{
-    Console.WriteLine("Podaj ocenę pracownika: ");
-    var input = Console.ReadLine();
-    Console.WriteLine($"Podano wartość {input}");
 
-    if (input == "q")
-    {
-        break;
-    }
-    try
-    {
-        employee.AddGrade(input);
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Exception \"{ex.Message}\" catched");
-    }
+//Obsługa za pomocą pamięci
 
-    Console.WriteLine("Aby wyjść z programu wciśnij 'q'");
-}
+//var employee = new EmployeeInMemory("Adam", "Kamizelich");
 
-var statistics = employee.GetStatistics();
+//while (true)
+//{
+//    Console.WriteLine("Podaj ocenę pracownika: ");
+//    var input = Console.ReadLine();
+//    Console.WriteLine($"Podano wartość {input}");
 
-Console.WriteLine($"Average = {statistics.Average:N2}");
-Console.WriteLine($"Max = {statistics.Max}");
-Console.WriteLine($"Min = {statistics.Min}");
-Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
+//    if (input == "q")
+//    {
+//        break;
+//    }
+//    try
+//    {
+//        employee.AddGrade(input);
+//    }
+//    catch (Exception ex)
+//    {
+//        Console.WriteLine($"Exception \"{ex.Message}\" catched");
+//    }
+
+//    Console.WriteLine("Aby wyjść z programu wciśnij 'q'");
+//}
+
+//var statistics = employee.GetStatistics();
+
+//Console.WriteLine($"Average = {statistics.Average:N2}");
+//Console.WriteLine($"Max = {statistics.Max}");
+//Console.WriteLine($"Min = {statistics.Min}");
+//Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
