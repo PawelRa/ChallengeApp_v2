@@ -28,9 +28,9 @@
             this.AddGrade(value);
         }
 
-        public virtual void AddGrade(string grade) {
-            if ((grade.Length == 1) && (char.ToUpper(grade[0]) == 'A' || char.ToUpper(grade[0]) == 'B'
-        || char.ToUpper(grade[0]) == 'C' || char.ToUpper(grade[0]) == 'D' || char.ToUpper(grade[0]) == 'E'))
+        public virtual void AddGrade(string grade)
+        {
+            if (grade.Length == 1)
             {
                 this.AddGrade(grade[0]);
             }
@@ -44,7 +44,29 @@
             }
         }
 
-        public abstract void AddGrade(char grade);
+        public virtual void AddGrade(char grade)
+        {
+            switch (char.ToUpper(grade))
+            {
+                case 'A':
+                    this.AddGrade(100);
+                    break;
+                case 'B':
+                    this.AddGrade(80);
+                    break;
+                case 'C':
+                    this.AddGrade(60);
+                    break;
+                case 'D':
+                    this.AddGrade(40);
+                    break;
+                case 'E':
+                    this.AddGrade(20);
+                    break;
+                default:
+                    throw new Exception("Wrong Letter");
+            }
+        }
 
         public abstract Statistics GetStatistics();
     }

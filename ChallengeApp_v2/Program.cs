@@ -17,6 +17,8 @@ Console.WriteLine($"Max = {statistics.Max}");
 Console.WriteLine($"Min = {statistics.Min}");
 Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
 
+employee.FileDelete();
+
 
 //=======================
 

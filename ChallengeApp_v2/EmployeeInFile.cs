@@ -25,29 +25,9 @@
             }
         }
 
-        public override void AddGrade(char grade)
+        public void FileDelete()
         {
-            switch (char.ToUpper(grade))
-            {
-                case 'A':
-                    this.AddGrade(100);
-                    break;
-                case 'B':
-                    this.AddGrade(80);
-                    break;
-                case 'C':
-                    this.AddGrade(60);
-                    break;
-                case 'D':
-                    this.AddGrade(40);
-                    break;
-                case 'E':
-                    this.AddGrade(20);
-                    break;
-                default:
-                    this.AddGrade(0);
-                    throw new Exception("Wrong Letter");
-            }
+            File.Delete(fileName);
         }
 
         public override Statistics GetStatistics()
@@ -98,7 +78,6 @@
                             throw new Exception("Bad letter");
                     }
                 }
-                File.Delete(fileName);
             }
             return result;
         }
