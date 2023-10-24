@@ -20,36 +20,6 @@
                 throw new Exception("Invalid grade data");
             }
         }
-
-        public override void AddGrade(double grade)
-        {
-            float value = (float)grade;
-            this.AddGrade(value);
-        }
-
-        public override void AddGrade(int grade)
-        {
-            float value = grade;
-            this.AddGrade(value);
-        }
-
-        public override void AddGrade(string grade)
-        {
-            if ((grade.Length == 1) && (char.ToUpper(grade[0]) == 'A' || char.ToUpper(grade[0]) == 'B'
-                || char.ToUpper(grade[0]) == 'C' || char.ToUpper(grade[0]) == 'D' || char.ToUpper(grade[0]) == 'E'))
-            {
-                this.AddGrade(grade[0]);
-            }
-            else if (float.TryParse(grade, out float value))
-            {
-                this.AddGrade(value);
-            }
-            else
-            {
-                throw new Exception("String is not float");
-            }
-        }
-
         public override void AddGrade(char grade)
         {
             switch (char.ToUpper(grade))

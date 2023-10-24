@@ -6,8 +6,19 @@ Console.WriteLine();
 
 // Obsługa za pomocą zapisu do pliku
 var employee = new EmployeeInFile("Adam", "Kamizelich");
-employee.AddGrade(0.5f);
+employee.AddGrade(50f);
+employee.AddGrade(100);
+employee.AddGrade(36);
 
+var statistics = employee.GetStatistics();
+
+//Console.WriteLine($"Average = {statistics.Average:N2}");
+//Console.WriteLine($"Max = {statistics.Max}");
+//Console.WriteLine($"Min = {statistics.Min}");
+//Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
+
+
+//=======================
 
 //Obsługa za pomocą pamięci
 
