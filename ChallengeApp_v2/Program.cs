@@ -19,6 +19,17 @@ Console.WriteLine($"Ocena Literowa = {statistics.AverageLetter}");
 
 employee.FileDelete();
 
+var tester = new EmployeeInMemory("imie", "nazwsko");
+tester.GradeAdded += EmployeeGradeAdded;
+
+void EmployeeGradeAdded(object sender, EventArgs args)
+{
+    Console.WriteLine("Dodano nową ocenę");
+}
+
+
+tester.AddGrade(60f);
+
 
 //=======================
 
