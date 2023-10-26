@@ -2,6 +2,7 @@
 {
     public class EmployeeInFile : EmployeeBase
     {
+        public event GradeAddedDelegate GradeAdded;
 
         private const string fileName = "grades.txt";
 
@@ -17,6 +18,10 @@
                 using (var writer = File.AppendText(fileName))
                 {
                     writer.WriteLine(grade);
+                    if (GradeAdded != null)
+                    {
+                        GradeAdded(this, new EventArgs());
+                    }
                 }
             }
             else

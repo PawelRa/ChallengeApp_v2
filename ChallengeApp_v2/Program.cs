@@ -6,6 +6,8 @@ Console.WriteLine();
 
 // Obsługa za pomocą zapisu do pliku
 var employee = new EmployeeInFile("Adam", "Kamizelich");
+employee.GradeAdded += EmployeeGradeAdded;
+
 employee.AddGrade(50f);
 employee.AddGrade(100);
 employee.AddGrade(36);
@@ -24,7 +26,7 @@ tester.GradeAdded += EmployeeGradeAdded;
 
 void EmployeeGradeAdded(object sender, EventArgs args)
 {
-    Console.WriteLine("Dodano nową ocenę");
+    Console.WriteLine($"Dodano nową ocenę");
 }
 
 
