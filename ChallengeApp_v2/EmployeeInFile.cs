@@ -1,4 +1,6 @@
-﻿namespace ChallengeApp_v2
+﻿using System.Diagnostics;
+
+namespace ChallengeApp_v2
 {
     public class EmployeeInFile : EmployeeBase
     {
@@ -38,49 +40,18 @@
         public override Statistics GetStatistics()
         {
             var result = new Statistics();
-            var lines = 0;
-
-            result.Average = 0;
-            result.Max = float.MinValue;
-            result.Min = float.MaxValue;
-
 
             if (File.Exists(fileName))
             {
                 using (var reader = File.OpenText(fileName))
                 {
                     var line = reader.ReadLine();
-                    Console.WriteLine(line);
+
                     while (line != null)
                     {
                         var number = float.Parse(line);
-                        result.Max = Math.Max(result.Max, number);
-                        result.Min = Math.Min(result.Min, number);
-                        result.Average += number;
-                        lines++;
+                        result.AddGrade(number);
                         line = reader.ReadLine();
-                    }
-                    result.Average /= lines;
-
-                    switch (result.Average)
-                    {
-                        case var average when average >= 100:
-                            result.AverageLetter = 'A';
-                            break;
-                        case var average when average >= 80:
-                            result.AverageLetter = 'B';
-                            break;
-                        case var average when average >= 60:
-                            result.AverageLetter = 'C';
-                            break;
-                        case var average when average >= 40:
-                            result.AverageLetter = 'D';
-                            break;
-                        case var average when average >= 20:
-                            result.AverageLetter = 'E';
-                            break;
-                        default:
-                            throw new Exception("Bad letter");
                     }
                 }
             }
