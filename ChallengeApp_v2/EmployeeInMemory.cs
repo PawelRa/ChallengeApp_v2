@@ -2,7 +2,7 @@
 {
     public class EmployeeInMemory : EmployeeBase
     {
-        public event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
         private List<float> grades = new List<float>();
 

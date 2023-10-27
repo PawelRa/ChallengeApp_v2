@@ -2,7 +2,7 @@
 {
     public class EmployeeInFile : EmployeeBase
     {
-        public event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
         private const string fileName = "grades.txt";
 
