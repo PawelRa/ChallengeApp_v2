@@ -81,6 +81,7 @@
 
             //act
             var max = statistics.Max;
+            emp.FileDelete();
 
             //assert
             Assert.That(40, Is.EqualTo(max));
@@ -98,6 +99,7 @@
 
             //act
             var min = statistics.Min;
+            emp.FileDelete();
 
             //assert
             Assert.That(20, Is.EqualTo(min));
@@ -115,6 +117,7 @@
 
             //act
             var average = statistics.Average;
+            emp.FileDelete();
 
             //assert
             Assert.That(30, Is.EqualTo(average));
